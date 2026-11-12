@@ -1,0 +1,22 @@
+{
+  "_readme": "Company details used on every page. Leave a value empty (\"\") to hide it. Edit, then push.",
+  "name": "A&M Propertiez",
+  "legalName": "A&M Propertiez LLC",
+  "url": "https://ampropertiez.com",
+  "tagline": "Land and homes in Central Florida, bought, built and sold straight.",
+  "serviceArea": "Lakeland, Polk County and Central Florida",
+  "city": "Lakeland",
+  "state": "FL",
+  "mailingAddress": "",
+  "phone": "",
+  "emails": {
+    "general": "info@ampropertiez.com",
+    "contractors": "bids@ampropertiez.com"
+  },
+  "team": [
+    { "name": "Mohamed Hadid", "title": "Managing Partner", "email": "mhadid@ampropertiez.com", "phone": "", "linkedin": "https://www.linkedin.com/in/mohadid", "focus": "Acquisitions, land research and project planning" },
+    { "name": "Abohfu Anumoh", "title": "Partner", "email": "aanumoh@ampropertiez.com", "phone": "", "linkedin": "", "focus": "" }
+  ],
+  "turnstileSiteKey": "",
+  "responseTime": "one business day"
+}
