@@ -1,0 +1,33 @@
+// Cloudflare Worker config for ampropertiez.com. Cloudflare reads this on every deploy.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Must match the Worker name in your Cloudflare dashboard.
+  "name": "amp-web",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-11-01",
+
+  // Builds the pages into dist/ before every deploy (no dashboard setting needed).
+  "build": { "command": "node build.mjs" },
+
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+
+  // Database for form messages and storage for uploaded files.
+  // Cloudflare creates these automatically on the first deploy (no IDs needed).
+  "d1_databases": [{ "binding": "DB", "database_name": "amp" }],
+  "kv_namespaces": [{ "binding": "FILES" }],
+
+  // Plain settings. Secrets (ADMIN_TOKEN, RESEND_API_KEY, TURNSTILE_SECRET) go in the dashboard as Secrets.
+  "vars": {
+    "MAIL_TO": "mhadid@ampropertiez.com,aanumoh@ampropertiez.com",
+    "MAIL_FROM": "A&M Propertiez <website@ampropertiez.com>",
+    "REPLY_TO": "info@ampropertiez.com",
+    "SITE_URL": "https://ampropertiez.com"
+  },
+  "keep_vars": true,
+  "observability": { "enabled": true }
+}

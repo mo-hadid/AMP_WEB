@@ -1,0 +1,15 @@
+{
+  "name": "amp-web",
+  "version": "1.1.0",
+  "private": true,
+  "description": "ampropertiez.com: static site and contact API on a Cloudflare Worker",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.45.0"
+  }
+}
