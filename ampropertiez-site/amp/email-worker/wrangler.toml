@@ -1,7 +1,0 @@
-name = "amp-shared-inbox"
-main = "worker.js"
-compatibility_date = "2026-11-01"
-
-[vars]
-# The two partners' personal mailboxes (Gmail etc.), comma separated. Both must be verified in Email Routing.
-PARTNER_INBOXES = "MO-PERSONAL@gmail.com,ABOHFU-PERSONAL@gmail.com"
